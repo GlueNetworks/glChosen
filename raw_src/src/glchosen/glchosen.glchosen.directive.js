@@ -1,21 +1,8 @@
-(function() {
-
-    /**
- * @ngdoc directive
- * @name glChosen.directive:glChosen
- * @restrict A
- *
- * @description
- * This replaces angular-chosen-localytics which has some logic that breaks glMultiSelect.
- *
- * @param {settings} angular expression evaluating to a settings hash.
- * - TODO fill me out...
- */
-var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
 
 angular.module('glChosen').directive('chosen', ["$timeout", function ($timeout) {
     'use strict';
+
+    var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
     var CHOSEN_OPTION_WHITELIST, NG_OPTIONS_REGEXP, isEmpty, snakeCase;
     NG_OPTIONS_REGEXP = /^\s*(.*?)(?:\s+as\s+(.*?))?(?:\s+group\s+by\s+(.*))?\s+for\s+(?:([\$\w][\$\w]*)|(?:\(\s*([\$\w][\$\w]*)\s*,\s*([\$\w][\$\w]*)\s*\)))\s+in\s+(.*?)(?:\s+track\s+by\s+(.*?))?$/;
@@ -127,4 +114,3 @@ angular.module('glChosen').directive('chosen', ["$timeout", function ($timeout) 
     };
 }]);
 
-}).call(this);
